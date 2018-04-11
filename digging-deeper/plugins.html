@@ -1,0 +1,701 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>Plugins · Vuex ORM</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.0">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../api-reference.html" />
+    
+    
+    <link rel="prev" href="query-class.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../prologue.html">
+            
+                <a href="../prologue.html">
+            
+                    
+                    Prologue
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" >
+            
+                <a target="_blank" href="https://github.com/vuex-orm/vuex-orm/releases">
+            
+                    
+                    Release Notes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../prologue/what-is-vuex-orm.html">
+            
+                <a href="../prologue/what-is-vuex-orm.html">
+            
+                    
+                    What Is Vuex ORM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../prologue/installation.html">
+            
+                <a href="../prologue/installation.html">
+            
+                    
+                    Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../prologue/getting-started.html">
+            
+                <a href="../prologue/getting-started.html">
+            
+                    
+                    Getting Started
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../core-components.html">
+            
+                <a href="../core-components.html">
+            
+                    
+                    Core Components
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../components/models.html">
+            
+                <a href="../components/models.html">
+            
+                    
+                    Models
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../components/modules-and-store.html">
+            
+                <a href="../components/modules-and-store.html">
+            
+                    
+                    Modules And Store
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../components/database-and-registration.html">
+            
+                <a href="../components/database-and-registration.html">
+            
+                    
+                    Database And Registration
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../interacting-with-store.html">
+            
+                <a href="../interacting-with-store.html">
+            
+                    
+                    Interacting With Store
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../store/inserting-and-updating-data.html">
+            
+                <a href="../store/inserting-and-updating-data.html">
+            
+                    
+                    Inserting And Updating Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../store/retrieving-data.html">
+            
+                <a href="../store/retrieving-data.html">
+            
+                    
+                    Retrieving Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../store/deleting-data.html">
+            
+                <a href="../store/deleting-data.html">
+            
+                    
+                    Deleting Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../relationships.html">
+            
+                <a href="../relationships.html">
+            
+                    
+                    Relationships
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../relationships/defining-relationships.html">
+            
+                <a href="../relationships/defining-relationships.html">
+            
+                    
+                    Defining Relationships
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../relationships/inserting-relationships.html">
+            
+                <a href="../relationships/inserting-relationships.html">
+            
+                    
+                    Inserting Relationships
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../relationships/retrieving-relationships.html">
+            
+                <a href="../relationships/retrieving-relationships.html">
+            
+                    
+                    Retrieving Relationships
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../advanced-usage.html">
+            
+                <a href="../advanced-usage.html">
+            
+                    
+                    Advanced Usage
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../advanced/interact-with-store-from-model.html">
+            
+                <a href="../advanced/interact-with-store-from-model.html">
+            
+                    
+                    Interact With Store From Model
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../advanced/accessors-and-mutators.html">
+            
+                <a href="../advanced/accessors-and-mutators.html">
+            
+                    
+                    Accessors & Mutators
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../advanced/lifecycle-hooks.html">
+            
+                <a href="../advanced/lifecycle-hooks.html">
+            
+                    
+                    Lifecycle Hooks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../advanced/serialization.html">
+            
+                <a href="../advanced/serialization.html">
+            
+                    
+                    Serialization
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../digging-deeper.html">
+            
+                <a href="../digging-deeper.html">
+            
+                    
+                    Digging Deeper
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="query-class.html">
+            
+                <a href="query-class.html">
+            
+                    
+                    Query Class
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.7.2" data-path="plugins.html">
+            
+                <a href="plugins.html">
+            
+                    
+                    Plugins
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../api-reference.html">
+            
+                <a href="../api-reference.html">
+            
+                    
+                    API Reference
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../api/model.html">
+            
+                <a href="../api/model.html">
+            
+                    
+                    Model
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Plugins</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="digging-deeper-plugins">Digging Deeper: Plugins</h1><p>You may add additional features to the Vuex ORM through plugins. Plugins usually add global-level functionality to Vuex ORM. Vuex ORM plugin works very similar to <a href="https://vuex.vuejs.org/en/plugins.html" target="_blank">Vue Plugin</a>.</p><h2 id="available-plugins">Available Plugins</h2><p>Here is the list of available plugins.</p><ul><li><a href="https://github.com/vuex-orm/plugin-search" target="_blank">vuex-orm-search</a> &#x2013; The plugin adds a <code>search()</code> method to the vuex-orm query methods to easily filter matched records using fuzzy search logic from the <a href="http://fusejs.io" target="_blank">Fuse.js</a> library.
+</li>
+<li><a href="https://github.com/vuex-orm/vuex-orm-apollo" target="_blank">vuex-orm-apollo</a> &#x2013; The plugin to sync the data against a <a href="https://graphql.org" target="_blank">GraphQL</a> API via <a href="https://www.apollographql.com" target="_blank">Apollo</a>.
+</li></ul>
+<h2 id="writing-a-plugin">Writing a Plugin</h2><p>A Vuex ORM plugin should be an object that exposes an install method. The method will be called with the Vuex ORM components such as Model, Repo, Query and such as the first argument, along with possible options.</p><pre><code class="lang-js"><span class="hljs-keyword">const</span> plugin = {
+  <span class="hljs-comment">// `components` contains Vuex ORM objects such as Model and Query.</span>
+  <span class="hljs-comment">// The plugin author can then extend those objects to add</span>
+  <span class="hljs-comment">// whatever features it needs.</span>
+  install (components, options) {
+    <span class="hljs-comment">// Add global (static) method or property.</span>
+    components.Model.globalMethod = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+      <span class="hljs-comment">// Logic...</span>
+    }
+
+    <span class="hljs-comment">// Add an instance method or property.</span>
+    components.Query.prototype.instanceMethod = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+      <span class="hljs-comment">// Logic...</span>
+    }
+  }
+}</code></pre>
+<h3 id="extendable-components">Extendable Components</h3><p>Following components are included within <code>components</code> argument.</p><ul><li>Model
+</li>
+<li>Query
+</li>
+<li>Attribute
+</li>
+<li>Type
+</li>
+<li>Attr
+</li>
+<li>Increment
+</li>
+<li>Relation
+</li>
+<li>HasOne
+</li>
+<li>BelongsTo
+</li>
+<li>HasMany
+</li>
+<li>HasManyBy
+</li>
+<li>BelongsToMany
+</li>
+<li>HasManyThrough
+</li>
+<li>MorphTo
+</li>
+<li>MorphOne
+</li>
+<li>MorphMany
+</li>
+<li>MorphToMany
+</li>
+<li>MorphedByMany
+</li>
+<li>rootGetters
+</li>
+<li>subGetters
+</li>
+<li>rootActions
+</li>
+<li>subActions
+</li>
+<li>mutations
+</li></ul>
+<h2 id="using-a-plugin">Using a Plugin</h2><p>Use plugins by calling the VuexORM.use() method.</p><pre><code class="lang-js"><span class="hljs-keyword">import</span> VuexORM <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;@vuex-orm/core&apos;</span>
+<span class="hljs-keyword">import</span> plugin <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;vuex-orm-plugin&apos;</span>
+
+VuexORM.use(plugin)</code></pre>
+<p>You can optionally pass in some options too.</p><pre><code class="lang-js">VuexORM.use(plugin, { someOption: <span class="hljs-literal">true</span> })</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="query-class.html" class="navigation navigation-prev " aria-label="Previous page: Query Class">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../api-reference.html" class="navigation navigation-next " aria-label="Next page: API Reference">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Plugins","level":"1.7.2","depth":2,"next":{"title":"API Reference","level":"1.8","depth":1,"path":"api-reference.md","ref":"api-reference.md","articles":[{"title":"Model","level":"1.8.1","depth":2,"path":"api/model.md","ref":"api/model.md","articles":[]}]},"previous":{"title":"Query Class","level":"1.7.1","depth":2,"path":"digging-deeper/query-class.md","ref":"digging-deeper/query-class.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","edit-link"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/vuex-orm/vuex-orm"},"edit-link":{"label":"Edit This Page","base":"https://github.com/vuex-orm/vuex-orm/tree/master/docs"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Vuex ORM","links":{"sharing":{"facebook":false,"twitter":false}},"gitbook":">3.0.0"},"file":{"path":"digging-deeper/plugins.md","mtime":"2018-03-28T15:07:43.153Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2018-04-11T14:59:53.694Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

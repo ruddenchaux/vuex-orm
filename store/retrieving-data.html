@@ -1,0 +1,729 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>Retrieving Data · Vuex ORM</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.0">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="deleting-data.html" />
+    
+    
+    <link rel="prev" href="inserting-and-updating-data.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../prologue.html">
+            
+                <a href="../prologue.html">
+            
+                    
+                    Prologue
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" >
+            
+                <a target="_blank" href="https://github.com/vuex-orm/vuex-orm/releases">
+            
+                    
+                    Release Notes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../prologue/what-is-vuex-orm.html">
+            
+                <a href="../prologue/what-is-vuex-orm.html">
+            
+                    
+                    What Is Vuex ORM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../prologue/installation.html">
+            
+                <a href="../prologue/installation.html">
+            
+                    
+                    Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../prologue/getting-started.html">
+            
+                <a href="../prologue/getting-started.html">
+            
+                    
+                    Getting Started
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../core-components.html">
+            
+                <a href="../core-components.html">
+            
+                    
+                    Core Components
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../components/models.html">
+            
+                <a href="../components/models.html">
+            
+                    
+                    Models
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../components/modules-and-store.html">
+            
+                <a href="../components/modules-and-store.html">
+            
+                    
+                    Modules And Store
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../components/database-and-registration.html">
+            
+                <a href="../components/database-and-registration.html">
+            
+                    
+                    Database And Registration
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../interacting-with-store.html">
+            
+                <a href="../interacting-with-store.html">
+            
+                    
+                    Interacting With Store
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="inserting-and-updating-data.html">
+            
+                <a href="inserting-and-updating-data.html">
+            
+                    
+                    Inserting And Updating Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.2" data-path="retrieving-data.html">
+            
+                <a href="retrieving-data.html">
+            
+                    
+                    Retrieving Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="deleting-data.html">
+            
+                <a href="deleting-data.html">
+            
+                    
+                    Deleting Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../relationships.html">
+            
+                <a href="../relationships.html">
+            
+                    
+                    Relationships
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../relationships/defining-relationships.html">
+            
+                <a href="../relationships/defining-relationships.html">
+            
+                    
+                    Defining Relationships
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../relationships/inserting-relationships.html">
+            
+                <a href="../relationships/inserting-relationships.html">
+            
+                    
+                    Inserting Relationships
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../relationships/retrieving-relationships.html">
+            
+                <a href="../relationships/retrieving-relationships.html">
+            
+                    
+                    Retrieving Relationships
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../advanced-usage.html">
+            
+                <a href="../advanced-usage.html">
+            
+                    
+                    Advanced Usage
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../advanced/interact-with-store-from-model.html">
+            
+                <a href="../advanced/interact-with-store-from-model.html">
+            
+                    
+                    Interact With Store From Model
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../advanced/accessors-and-mutators.html">
+            
+                <a href="../advanced/accessors-and-mutators.html">
+            
+                    
+                    Accessors & Mutators
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../advanced/lifecycle-hooks.html">
+            
+                <a href="../advanced/lifecycle-hooks.html">
+            
+                    
+                    Lifecycle Hooks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../advanced/serialization.html">
+            
+                <a href="../advanced/serialization.html">
+            
+                    
+                    Serialization
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../digging-deeper.html">
+            
+                <a href="../digging-deeper.html">
+            
+                    
+                    Digging Deeper
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../digging-deeper/query-class.html">
+            
+                <a href="../digging-deeper/query-class.html">
+            
+                    
+                    Query Class
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../digging-deeper/plugins.html">
+            
+                <a href="../digging-deeper/plugins.html">
+            
+                    
+                    Plugins
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../api-reference.html">
+            
+                <a href="../api-reference.html">
+            
+                    
+                    API Reference
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../api/model.html">
+            
+                <a href="../api/model.html">
+            
+                    
+                    Model
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Retrieving Data</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="store-retrieving-data">Store: Retrieving Data</h1><p>You can use getters to retrieve data from the Vuex Store. Not only it fetches the data, but Vuex ORM will convert those fetched data into a model class instance.</p><pre><code class="lang-js"><span class="hljs-keyword">const</span> user = store.getters[<span class="hljs-string">&apos;entities/users/find&apos;</span>](<span class="hljs-number">1</span>)
+
+<span class="hljs-comment">// User { id: 1, name: &apos;name&apos; }</span></code></pre>
+<blockquote><p><strong>NOTE:</strong> To fetch data with its relationship, you must call <code>with</code> method during the query. Please see <a href="../relationships/retrieving-relationships.html">Retrieving Relationships</a> for more detail.</p></blockquote><h2 id="get-all-data">Get All Data</h2><p><code>all</code> getter is going to fetch all data from the store.</p><pre><code class="lang-js"><span class="hljs-keyword">const</span> users = store.getters[<span class="hljs-string">&apos;entities/users/all&apos;</span>]()
+
+<span class="hljs-comment">/*
+  [
+    User { id: 1, name: &apos;John&apos; },
+    User: { id: 2, name: &apos;Jane&apos; }
+  ]
+*/</span></code></pre>
+<h2 id="get-single-data">Get Single Data</h2><p><code>find</code> getter is going to fetch single data from the store. The argument is the id &#x2013; primary key value &#x2013; for the record.</p><pre><code class="lang-js"><span class="hljs-comment">// Retrieve a record by its primary key.</span>
+<span class="hljs-keyword">const</span> users = store.getters[<span class="hljs-string">&apos;entities/users/find&apos;</span>](<span class="hljs-number">1</span>)
+
+<span class="hljs-comment">// User { id: 1, name: &apos;John&apos; }</span></code></pre>
+<h2 id="query-builder">Query Builder</h2><p>The <code>query</code> getter will return the query builder that provides fluent API to search and fetch data from the store. You can use the query builder to construct the more complex query conditions.</p><p>You can obtain query builder by calling <code>query</code> getter.</p><pre><code class="lang-js"><span class="hljs-keyword">const</span> query = store.getters[<span class="hljs-string">&apos;entities/users/query&apos;</span>]()</code></pre>
+<p>Or you may omit <code>query</code> and directly call module. This is just a shorthand for the <code>query</code> getter.</p><pre><code class="lang-js"><span class="hljs-keyword">const</span> query = store.getters[<span class="hljs-string">&apos;entities/users&apos;</span>]()</code></pre>
+<h3 id="get-all-data">Get All Data</h3><p>Use <code>get</code> method to fetch all data for the entity. The result is going to be an array containing a list of model instances.</p><pre><code class="lang-js"><span class="hljs-keyword">const</span> users = store.getters[<span class="hljs-string">&apos;entities/users/query&apos;</span>]().get()
+
+<span class="hljs-comment">// [User { id: 1, name: &apos;John&apos; }, User: { id: 2, name: &apos;Jane&apos; }]</span></code></pre>
+<h3 id="get-a-single-data">Get A Single Data</h3><p>Use <code>first</code> method to fetch a single data for the entity. It will return the very first item in the state.</p><pre><code class="lang-js"><span class="hljs-keyword">const</span> user = store.getters[<span class="hljs-string">&apos;entities/users/query&apos;</span>]().first()
+
+<span class="hljs-comment">// User { id: 1, name: &apos;John&apos; }</span></code></pre>
+<h3 id="get-the-last-matching-data">Get The Last Matching Data</h3><p>As oppose to <code>first</code> method, the <code>last</code> method returns the last matching data.</p><pre><code class="lang-js"><span class="hljs-keyword">const</span> user = store.getters[<span class="hljs-string">&apos;entities/users/query&apos;</span>]().last()</code></pre>
+<h3 id="where-clauses">Where Clauses</h3><h4 id="simple-where-clauses">Simple Where Clauses</h4><p>You may use the <code>where</code> method on a query chain to add where conditions. For example, here is a query that fetches all users that have &quot;age&quot; value of &quot;20&quot;.</p><pre><code class="lang-js"><span class="hljs-keyword">const</span> user = store.getters[<span class="hljs-string">&apos;entities/users/query&apos;</span>]().where(<span class="hljs-string">&apos;age&apos;</span>, <span class="hljs-number">20</span>).get()
+
+<span class="hljs-comment">// [User { id: 1, age: 20 }, User { id: 2, age: 20 }]</span></code></pre>
+<p>You may pass a closure to the 2nd argument when you need more powerful constraint. The argument is the value of the field.</p><pre><code class="lang-js"><span class="hljs-keyword">const</span> user = store.getters[<span class="hljs-string">&apos;entities/users/query&apos;</span>]().where(<span class="hljs-string">&apos;age&apos;</span>, value =&gt; value &gt; <span class="hljs-number">20</span>).get()
+
+<span class="hljs-comment">// [User { id: 1, age: 25 }, User { id: 2, age: 30 }]</span></code></pre>
+<p>Or, you may pass a closure to the 1st argument to get full control of the condition. The argument is the data itself.</p><pre><code class="lang-js"><span class="hljs-keyword">const</span> user = store.getters[<span class="hljs-string">&apos;entities/users/query&apos;</span>]().where(record =&gt; record.age &gt; <span class="hljs-number">20</span>).get()
+
+<span class="hljs-comment">// [User { id: 1, age: 25 }, User { id: 2, age: 30 }]</span></code></pre>
+<p>When passing a closure to the 1st argument, it will also receive query builder as the 2nd argument. By using the query builder, you may nest the where clause. This is useful when you want &quot;group&quot; the where clauses.</p><pre><code class="lang-js"><span class="hljs-comment">// Retrieve all users with role of user, and age of 20 or id of 1.</span>
+<span class="hljs-keyword">const</span> user = store.getters[<span class="hljs-string">&apos;entities/users/query&apos;</span>]()
+  .where(<span class="hljs-string">&apos;role&apos;</span>, <span class="hljs-string">&apos;user&apos;</span>)
+  .where((_record, query) =&gt; {
+    query.where(<span class="hljs-string">&apos;age&apos;</span>, <span class="hljs-number">20</span>).orWhere(<span class="hljs-string">&apos;id&apos;</span>, <span class="hljs-number">1</span>)
+  })
+  .get()</code></pre>
+<p>Finally, the model instance is passed as a 3rd argument. It&apos;s useful when you want to use a model method or <a href="../advanced/accessors-and-mutators.html">mutated</a> property for the condition.</p><pre><code class="lang-js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">User</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Model</span> </span>{
+  <span class="hljs-keyword">static</span> entity = <span class="hljs-string">&apos;entity&apos;</span>
+
+  <span class="hljs-keyword">static</span> fields () {
+    <span class="hljs-keyword">return</span> {
+      id: <span class="hljs-keyword">this</span>.attr(<span class="hljs-literal">null</span>),
+      name: <span class="hljs-keyword">this</span>.attr(<span class="hljs-string">&apos;&apos;</span>),
+      role: <span class="hljs-keyword">this</span>.attr(<span class="hljs-string">&apos;&apos;</span>)
+    }
+  }
+
+  isAdmin () {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.role === <span class="hljs-string">&apos;admin&apos;</span>
+  }
+}
+
+<span class="hljs-keyword">const</span> user = store.getters[<span class="hljs-string">&apos;entities/users/query&apos;</span>]()
+  .where((_record, _query, model) =&gt; {
+    <span class="hljs-keyword">return</span> model.isAdmin()
+  })
+  .get()</code></pre>
+<h4 id="or-statement">Or Statement</h4><p>You may chain where constraints together as well as add <code>or</code> condition to the query. The <code>orWhere</code> method accepts the same arguments as the where method.</p><pre><code class="lang-js"><span class="hljs-keyword">const</span> user = store.getters[<span class="hljs-string">&apos;entities/users/query&apos;</span>]()
+  .where(<span class="hljs-string">&apos;role&apos;</span>, <span class="hljs-string">&apos;admin&apos;</span>)
+  .orWhere(<span class="hljs-string">&apos;name&apos;</span>, <span class="hljs-string">&apos;John&apos;</span>)
+  .get()
+
+<span class="hljs-comment">// [User { id: 1, name: &apos;John&apos;, role: &apos;user&apos; }, User { id: 2, name: &apos;Jane&apos;, role: &apos;admin&apos; }]</span></code></pre>
+<h3 id="order-by">Order By</h3><p>The <code>orderBy</code> method allows you to sort the result of the query by a given field. The first argument to the orderBy method should be the column you wish to sort by, while the second argument controls the direction of the sort and may be either <code>asc</code> or <code>desc</code>. If there is no 2nd argument, the direction is going to be <code>asc</code>.</p><pre><code class="lang-js"><span class="hljs-comment">// Order users by name.</span>
+<span class="hljs-keyword">const</span> user = store.getters[<span class="hljs-string">&apos;entities/users/query&apos;</span>]().orderBy(<span class="hljs-string">&apos;name&apos;</span>).get()
+
+<span class="hljs-comment">// [User { id: 2, name: &apos;Andy&apos; }, { id: 1, name: &apos;John&apos; }]</span>
+
+<span class="hljs-comment">// You may also chain orderBy.</span>
+<span class="hljs-keyword">const</span> user = store.getters[<span class="hljs-string">&apos;entities/users/query&apos;</span>]()
+    .orderBy(<span class="hljs-string">&apos;name&apos;</span>)
+    .orderBy(<span class="hljs-string">&apos;age&apos;</span>, <span class="hljs-string">&apos;desc&apos;</span>)
+    .get()
+
+<span class="hljs-comment">// [User { id: 4, name: &apos;Andy&apos;, age: 32 }, { id: 2, name: &apos;Andy&apos;, age: 27 }]</span></code></pre>
+<h3 id="offset--limit">Offset &amp; Limit</h3><p>Use <code>offset</code> method to set the offset for the data.</p><pre><code class="lang-js"><span class="hljs-keyword">const</span> user = store.getters[<span class="hljs-string">&apos;entities/users/query&apos;</span>]().offset(<span class="hljs-number">2</span>).get()
+
+<span class="hljs-comment">// [User { id: 3, age: 35 }, User { id: 4, age: 40 }]</span></code></pre>
+<p>Use <code>limit</code> method to set the maximum number of records to retrieve.</p><pre><code class="lang-js"><span class="hljs-keyword">const</span> user = store.getters[<span class="hljs-string">&apos;entities/users/query&apos;</span>]().limit(<span class="hljs-number">2</span>).get()
+
+<span class="hljs-comment">// [User { id: 1, age: 25 }, User { id: 2, age: 30 }]</span></code></pre>
+<p>Both <code>offset</code> and <code>limit</code> can be chained together to paginate through data.</p><pre><code class="lang-js"><span class="hljs-keyword">const</span> user = store.getters[<span class="hljs-string">&apos;entities/users/query&apos;</span>]()
+  .offset(<span class="hljs-number">1</span>)
+  .limit(<span class="hljs-number">2</span>)
+  .get()
+
+<span class="hljs-comment">// [User { id: 2, age: 30 }, User { id: 3, age: 35 }]</span></code></pre>
+<h3 id="aggregates">Aggregates</h3><p>The query builder also provides aggregate methods. Available methods are <code>count</code>, <code>max</code> and <code>min</code>.</p><pre><code class="lang-js"><span class="hljs-keyword">const</span> users = store.getters[<span class="hljs-string">&apos;entities/users/query&apos;</span>]().count()
+
+<span class="hljs-keyword">const</span> mostLiked = store.getters[<span class="hljs-string">&apos;entities/posts/query&apos;</span>]().max(<span class="hljs-string">&apos;like&apos;</span>)
+
+<span class="hljs-keyword">const</span> cheapest = store.getters[<span class="hljs-string">&apos;entities/orders/query&apos;</span>]().min(<span class="hljs-string">&apos;price&apos;</span>)</code></pre>
+<p>Of course, you may combine these methos with other clauses.</p><pre><code class="lang-js"><span class="hljs-keyword">const</span> users = store.getters[<span class="hljs-string">&apos;entities/users/query&apos;</span>]()
+  .where(<span class="hljs-string">&apos;role&apos;</span>, <span class="hljs-string">&apos;user&apos;</span>)
+  .count()</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="inserting-and-updating-data.html" class="navigation navigation-prev " aria-label="Previous page: Inserting And Updating Data">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="deleting-data.html" class="navigation navigation-next " aria-label="Next page: Deleting Data">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Retrieving Data","level":"1.4.2","depth":2,"next":{"title":"Deleting Data","level":"1.4.3","depth":2,"path":"store/deleting-data.md","ref":"store/deleting-data.md","articles":[]},"previous":{"title":"Inserting And Updating Data","level":"1.4.1","depth":2,"path":"store/inserting-and-updating-data.md","ref":"store/inserting-and-updating-data.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","edit-link"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/vuex-orm/vuex-orm"},"edit-link":{"label":"Edit This Page","base":"https://github.com/vuex-orm/vuex-orm/tree/master/docs"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Vuex ORM","links":{"sharing":{"facebook":false,"twitter":false}},"gitbook":">3.0.0"},"file":{"path":"store/retrieving-data.md","mtime":"2018-04-11T14:56:51.153Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2018-04-11T14:59:53.694Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

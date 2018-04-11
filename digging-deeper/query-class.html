@@ -1,0 +1,709 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>Query Class · Vuex ORM</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.0">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="plugins.html" />
+    
+    
+    <link rel="prev" href="../digging-deeper.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../prologue.html">
+            
+                <a href="../prologue.html">
+            
+                    
+                    Prologue
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" >
+            
+                <a target="_blank" href="https://github.com/vuex-orm/vuex-orm/releases">
+            
+                    
+                    Release Notes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../prologue/what-is-vuex-orm.html">
+            
+                <a href="../prologue/what-is-vuex-orm.html">
+            
+                    
+                    What Is Vuex ORM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../prologue/installation.html">
+            
+                <a href="../prologue/installation.html">
+            
+                    
+                    Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../prologue/getting-started.html">
+            
+                <a href="../prologue/getting-started.html">
+            
+                    
+                    Getting Started
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../core-components.html">
+            
+                <a href="../core-components.html">
+            
+                    
+                    Core Components
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../components/models.html">
+            
+                <a href="../components/models.html">
+            
+                    
+                    Models
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../components/modules-and-store.html">
+            
+                <a href="../components/modules-and-store.html">
+            
+                    
+                    Modules And Store
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../components/database-and-registration.html">
+            
+                <a href="../components/database-and-registration.html">
+            
+                    
+                    Database And Registration
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../interacting-with-store.html">
+            
+                <a href="../interacting-with-store.html">
+            
+                    
+                    Interacting With Store
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../store/inserting-and-updating-data.html">
+            
+                <a href="../store/inserting-and-updating-data.html">
+            
+                    
+                    Inserting And Updating Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../store/retrieving-data.html">
+            
+                <a href="../store/retrieving-data.html">
+            
+                    
+                    Retrieving Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../store/deleting-data.html">
+            
+                <a href="../store/deleting-data.html">
+            
+                    
+                    Deleting Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../relationships.html">
+            
+                <a href="../relationships.html">
+            
+                    
+                    Relationships
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../relationships/defining-relationships.html">
+            
+                <a href="../relationships/defining-relationships.html">
+            
+                    
+                    Defining Relationships
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../relationships/inserting-relationships.html">
+            
+                <a href="../relationships/inserting-relationships.html">
+            
+                    
+                    Inserting Relationships
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../relationships/retrieving-relationships.html">
+            
+                <a href="../relationships/retrieving-relationships.html">
+            
+                    
+                    Retrieving Relationships
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../advanced-usage.html">
+            
+                <a href="../advanced-usage.html">
+            
+                    
+                    Advanced Usage
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../advanced/interact-with-store-from-model.html">
+            
+                <a href="../advanced/interact-with-store-from-model.html">
+            
+                    
+                    Interact With Store From Model
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../advanced/accessors-and-mutators.html">
+            
+                <a href="../advanced/accessors-and-mutators.html">
+            
+                    
+                    Accessors & Mutators
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../advanced/lifecycle-hooks.html">
+            
+                <a href="../advanced/lifecycle-hooks.html">
+            
+                    
+                    Lifecycle Hooks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../advanced/serialization.html">
+            
+                <a href="../advanced/serialization.html">
+            
+                    
+                    Serialization
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../digging-deeper.html">
+            
+                <a href="../digging-deeper.html">
+            
+                    
+                    Digging Deeper
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.7.1" data-path="query-class.html">
+            
+                <a href="query-class.html">
+            
+                    
+                    Query Class
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="plugins.html">
+            
+                <a href="plugins.html">
+            
+                    
+                    Plugins
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../api-reference.html">
+            
+                <a href="../api-reference.html">
+            
+                    
+                    API Reference
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../api/model.html">
+            
+                <a href="../api/model.html">
+            
+                    
+                    Model
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Query Class</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="digging-deeper-query-class">Digging Deeper: Query Class</h1><p>Query class is responsible for fetching data from Vuex Store. When you fetch data through Vuex getters such as <code>store.getters[&apos;entities/users/find&apos;](1)</code>, it&apos;s using the Query class underneath to find and filter data.</p><p>Usually, you won&apos;t need to care about Query class as long as you keep using getters. However, when you would like to add global features when querying data, it might be useful to use lifecycle hook. This is especially useful when you want to create a plugin for the Vuex ORM.</p><h2 id="lifecycle-hook-types">Lifecycle Hook Types</h2><p>Query class comes with following lifecycle hooks.</p><ul><li><code>beforeProcess</code> &#x2013; Called before data get filtered.
+</li>
+<li><code>afterWhere</code> &#x2013; Called right after the data get filtered by <code>where</code> clause.
+</li>
+<li><code>afterOrderBy</code> &#x2013; Called right after the data get sorted by <code>orderBy</code> clause.
+</li>
+<li><code>afterLimit</code> &#x2013; Called right after the data get limited by <code>limit</code> and <code>offset</code> clause.
+</li></ul>
+<p>By registering callbacks to each hook, you can manipulate the result from the getter call.</p><h3 id="lifecycle-hook-methods">Lifecycle Hook Methods</h3><p>Like javascript events, you can use the <strong>Query.on()</strong> to register a hook, and <strong>Query.off()</strong> to remove the hook.</p><pre><code class="lang-js"><span class="hljs-keyword">const</span> hookId = Query.on(<span class="hljs-string">&apos;afterWhere&apos;</span>, callback())
+
+Query.off(hookId)</code></pre>
+<h4 id="lifecycle-hook-scope">Lifecycle Hook Scope</h4><p>By default, all hooks are registered globally within the Query class and ran on all instances within your application.</p><p>If you only want to register a hook to be available for the next query() call, you can add the third optional parameter <strong>true</strong> to have the Query class automatically remove your hook after the next query() method call.</p><pre><code class="lang-js">Query.on(<span class="hljs-string">&apos;beforeProcess&apos;</span>, callback(), <span class="hljs-literal">true</span>)</code></pre>
+<h3 id="lifecycle-api">Lifecycle API</h3><p><strong>Query.on</strong>(type, callback, once?): hookId: number</p><ul><li><code>type</code> (string) - must be one of [beforeProcess, afterWhere, afterOrderBy, afterLimit]
+</li>
+<li><code>callback</code> (function) - must be function
+</li>
+<li><code>once</code> (boolean, optional) - default false
+</li></ul>
+<p><strong>Returns</strong>: number: &lt; HookId &gt;</p><h3 id="examples">Examples</h3><p><strong>Register a beforeProcess hook to map all records</strong></p><pre><code class="lang-js"><span class="hljs-keyword">import</span> { Query } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;vuex-orm/core&apos;</span>
+
+<span class="hljs-comment">// Add extra `hooked` field on each record.</span>
+<span class="hljs-keyword">const</span> hookMapRecordsId = Query.on(<span class="hljs-string">&apos;beforeProcess&apos;</span>, (records, entity) =&gt; {
+  <span class="hljs-keyword">return</span> records.map((record) =&gt; {
+    record.hooked = <span class="hljs-literal">true</span>
+    <span class="hljs-keyword">return</span> record
+  })
+})
+
+<span class="hljs-keyword">const</span> result = store.getters[<span class="hljs-string">&apos;entities/users/all&apos;</span>]()
+
+<span class="hljs-comment">/* result
+  [
+    { id: 1, name: &apos;John Doe&apos;, hooked: true },
+    { id: 2, name: &apos;Jane Doe&apos;, hooked: true }
+  ]
+*/</span>
+
+<span class="hljs-keyword">const</span> hookRemoved = Query.off(hookMapRecordsId)
+
+<span class="hljs-comment">/* hookRemoved = true */</span></code></pre>
+<p><strong>Soft Delete Hook Sample Implementation</strong></p><pre><code class="lang-js"><span class="hljs-keyword">import</span> { Query } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;vuex-orm/core&apos;</span>
+<span class="hljs-keyword">import</span> store <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;@/store&apos;</span>
+
+<span class="hljs-keyword">const</span> data = [
+  { id: <span class="hljs-number">1</span>, name: <span class="hljs-string">&apos;John Doe&apos;</span>, deletedAt: <span class="hljs-literal">null</span> },
+  { id: <span class="hljs-number">1</span>, name: <span class="hljs-string">&apos;Bob Doe&apos;</span>, deletedAt: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>() }
+]
+
+store.dispatch(<span class="hljs-string">&apos;entities/users/create&apos;</span>, { data: data })
+
+<span class="hljs-keyword">let</span> softDeleteHookId
+
+<span class="hljs-keyword">const</span> softDeleteCallback = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">records</span>) </span>{
+  <span class="hljs-keyword">return</span> records.filter(r =&gt; !r.deletedAt)
+}
+<span class="hljs-keyword">const</span> deletedRecordsCallback = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">records</span>) </span>{
+  <span class="hljs-keyword">return</span> records.filter(r =&gt; !!r.deletedAt)
+}
+
+<span class="hljs-comment">// register global hook</span>
+softDeleteHookId = Query.on(<span class="hljs-string">&apos;beforeProcess&apos;</span>, softDeleteCallback)
+
+<span class="hljs-comment">// query data</span>
+<span class="hljs-keyword">const</span> results = store.getters[<span class="hljs-string">&apos;entities/users/query&apos;</span>].all()
+<span class="hljs-comment">/* results
+[{ id: 1, name: &apos;John Doe&apos;, deletedAt: null }]
+ */</span>
+
+<span class="hljs-comment">// *** switch to showing only deleted items **</span>
+Query.off(softDeleteHookId) <span class="hljs-comment">// remove global callback</span>
+Query.on(<span class="hljs-string">&apos;beforeProcess&apos;</span>, deletedRecordsCallback, <span class="hljs-literal">true</span>) <span class="hljs-comment">// run only once</span>
+
+<span class="hljs-keyword">const</span> deletedResults = store.getters[<span class="hljs-string">&apos;entities/users/query&apos;</span>].all()
+<span class="hljs-comment">/* deletedResults
+[{ id: 2, name: &apos;Bob Doe&apos;, deletedAt: &apos;2018-03-15TZ00:00:00&apos; }]
+ */</span>
+
+<span class="hljs-comment">// re-initialize global soft deletes</span>
+softDeleteHookId = Query.on(<span class="hljs-string">&apos;beforeProcess&apos;</span>, softDeleteCallback)</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../digging-deeper.html" class="navigation navigation-prev " aria-label="Previous page: Digging Deeper">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="plugins.html" class="navigation navigation-next " aria-label="Next page: Plugins">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Query Class","level":"1.7.1","depth":2,"next":{"title":"Plugins","level":"1.7.2","depth":2,"path":"digging-deeper/plugins.md","ref":"digging-deeper/plugins.md","articles":[]},"previous":{"title":"Digging Deeper","level":"1.7","depth":1,"path":"digging-deeper.md","ref":"digging-deeper.md","articles":[{"title":"Query Class","level":"1.7.1","depth":2,"path":"digging-deeper/query-class.md","ref":"digging-deeper/query-class.md","articles":[]},{"title":"Plugins","level":"1.7.2","depth":2,"path":"digging-deeper/plugins.md","ref":"digging-deeper/plugins.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["github","edit-link"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/vuex-orm/vuex-orm"},"edit-link":{"label":"Edit This Page","base":"https://github.com/vuex-orm/vuex-orm/tree/master/docs"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Vuex ORM","links":{"sharing":{"facebook":false,"twitter":false}},"gitbook":">3.0.0"},"file":{"path":"digging-deeper/query-class.md","mtime":"2018-03-21T04:37:26.788Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2018-04-11T14:59:53.694Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

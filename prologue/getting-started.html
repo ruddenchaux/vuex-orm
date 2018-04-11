@@ -1,0 +1,818 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>Getting Started · Vuex ORM</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.0">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../core-components.html" />
+    
+    
+    <link rel="prev" href="installation.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../prologue.html">
+            
+                <a href="../prologue.html">
+            
+                    
+                    Prologue
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" >
+            
+                <a target="_blank" href="https://github.com/vuex-orm/vuex-orm/releases">
+            
+                    
+                    Release Notes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="what-is-vuex-orm.html">
+            
+                <a href="what-is-vuex-orm.html">
+            
+                    
+                    What Is Vuex ORM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="installation.html">
+            
+                <a href="installation.html">
+            
+                    
+                    Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.4" data-path="getting-started.html">
+            
+                <a href="getting-started.html">
+            
+                    
+                    Getting Started
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../core-components.html">
+            
+                <a href="../core-components.html">
+            
+                    
+                    Core Components
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../components/models.html">
+            
+                <a href="../components/models.html">
+            
+                    
+                    Models
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../components/modules-and-store.html">
+            
+                <a href="../components/modules-and-store.html">
+            
+                    
+                    Modules And Store
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../components/database-and-registration.html">
+            
+                <a href="../components/database-and-registration.html">
+            
+                    
+                    Database And Registration
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../interacting-with-store.html">
+            
+                <a href="../interacting-with-store.html">
+            
+                    
+                    Interacting With Store
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../store/inserting-and-updating-data.html">
+            
+                <a href="../store/inserting-and-updating-data.html">
+            
+                    
+                    Inserting And Updating Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../store/retrieving-data.html">
+            
+                <a href="../store/retrieving-data.html">
+            
+                    
+                    Retrieving Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../store/deleting-data.html">
+            
+                <a href="../store/deleting-data.html">
+            
+                    
+                    Deleting Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../relationships.html">
+            
+                <a href="../relationships.html">
+            
+                    
+                    Relationships
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../relationships/defining-relationships.html">
+            
+                <a href="../relationships/defining-relationships.html">
+            
+                    
+                    Defining Relationships
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../relationships/inserting-relationships.html">
+            
+                <a href="../relationships/inserting-relationships.html">
+            
+                    
+                    Inserting Relationships
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../relationships/retrieving-relationships.html">
+            
+                <a href="../relationships/retrieving-relationships.html">
+            
+                    
+                    Retrieving Relationships
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../advanced-usage.html">
+            
+                <a href="../advanced-usage.html">
+            
+                    
+                    Advanced Usage
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../advanced/interact-with-store-from-model.html">
+            
+                <a href="../advanced/interact-with-store-from-model.html">
+            
+                    
+                    Interact With Store From Model
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../advanced/accessors-and-mutators.html">
+            
+                <a href="../advanced/accessors-and-mutators.html">
+            
+                    
+                    Accessors & Mutators
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../advanced/lifecycle-hooks.html">
+            
+                <a href="../advanced/lifecycle-hooks.html">
+            
+                    
+                    Lifecycle Hooks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../advanced/serialization.html">
+            
+                <a href="../advanced/serialization.html">
+            
+                    
+                    Serialization
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../digging-deeper.html">
+            
+                <a href="../digging-deeper.html">
+            
+                    
+                    Digging Deeper
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../digging-deeper/query-class.html">
+            
+                <a href="../digging-deeper/query-class.html">
+            
+                    
+                    Query Class
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../digging-deeper/plugins.html">
+            
+                <a href="../digging-deeper/plugins.html">
+            
+                    
+                    Plugins
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../api-reference.html">
+            
+                <a href="../api-reference.html">
+            
+                    
+                    API Reference
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../api/model.html">
+            
+                <a href="../api/model.html">
+            
+                    
+                    Model
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Getting Started</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="prologue-getting-started">Prologue: Getting Started</h1><p>This document is quick start guide to begin using Vuex ORM. It assumes you have a basic understanding of <a href="https://github.com/vuejs/vuex/" target="_blank">Vuex</a>. If you are not familiar with Vuex, please visit <a href="https://vuex.vuejs.org" target="_blank">Vuex Documentation</a> to learn about Vuex.</p><blockquote><p><strong>NOTE:</strong> We will be using ES2015 syntax for code examples for the rest of the docs. Also, we use &quot;Class Property&quot; to define some property in the class. This syntax requires compilers such as <a href="https://babeljs.io/docs/plugins/preset-stage-2/" target="_blank">babel-preset-stage-2</a> which is already included in Vue CLI template.</p></blockquote><h2 id="core-architecture">Core Architecture</h2><p>To setup Vuex ORM, you must first create following components.</p><ul><li>Models
+</li>
+<li>Modules
+</li>
+<li>Database
+</li></ul>
+<p>You usually first create models and modules, then register them to the database. Finally, install the database to the Vuex as a plugin.</p><h2 id="create-models">Create Models</h2><p>Models represent schema of the data which is going to be stored at Vuex Store. The schema would often be same as API response from the server, but it could be whatever you like.</p><p>Models can also have relationships with other models like any other ORM library. For example, a post belongs to a user, or post has many comments.</p><p>Let&apos;s declare models by extending Vuex ORM <code>Model</code>.</p><pre><code class="lang-js"><span class="hljs-comment">// User Model</span>
+<span class="hljs-keyword">import</span> { Model } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;@vuex-orm/core&apos;</span>
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">User</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Model</span> </span>{
+  <span class="hljs-comment">// This is the name used as module name of the Vuex Store.</span>
+  <span class="hljs-keyword">static</span> entity = <span class="hljs-string">&apos;users&apos;</span>
+
+  <span class="hljs-comment">// List of all fields (schema) of the post model. `this.attr` is used</span>
+  <span class="hljs-comment">// for the generic field type. The argument is the default value.</span>
+  <span class="hljs-keyword">static</span> fields () {
+    <span class="hljs-keyword">return</span> {
+      id: <span class="hljs-keyword">this</span>.attr(<span class="hljs-literal">null</span>),
+      name: <span class="hljs-keyword">this</span>.attr(<span class="hljs-string">&apos;&apos;</span>),
+      email: <span class="hljs-keyword">this</span>.attr(<span class="hljs-string">&apos;&apos;</span>),
+    }
+  }
+}
+
+
+<span class="hljs-comment">// Post Model</span>
+<span class="hljs-keyword">import</span> { Model } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;@vuex-orm/core&apos;</span>
+<span class="hljs-keyword">import</span> User <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./User&apos;</span>
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Post</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Model</span> </span>{
+  <span class="hljs-keyword">static</span> entity = <span class="hljs-string">&apos;posts&apos;</span>
+
+  <span class="hljs-keyword">static</span> fields () {
+    <span class="hljs-comment">// `this.belongsTo` is for belongs to relationship. The first argument</span>
+    <span class="hljs-comment">// is the Model class, and second is the foreign key.</span>
+    <span class="hljs-keyword">return</span> {
+      id: <span class="hljs-keyword">this</span>.attr(<span class="hljs-literal">null</span>),
+      user_id: <span class="hljs-keyword">this</span>.attr(<span class="hljs-literal">null</span>),
+      title: <span class="hljs-keyword">this</span>.attr(<span class="hljs-string">&apos;&apos;</span>),
+      body: <span class="hljs-keyword">this</span>.attr(<span class="hljs-string">&apos;&apos;</span>),
+      published: <span class="hljs-keyword">this</span>.attr(<span class="hljs-literal">false</span>),
+      author: <span class="hljs-keyword">this</span>.belongsTo(User, <span class="hljs-string">&apos;user_id&apos;</span>)
+    }
+  }
+}</code></pre>
+<p>The above example shows that there are <code>User</code> Model and <code>Post</code> Model. <code>Post</code> Model has <code>belongsTo</code> relationship to User at <code>author</code> key.</p><p>If you don&apos;t want use &quot;Class Property&quot; syntax such as <code>static entity</code>, you can define them differently too.</p><pre><code class="lang-js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">User</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Model</span> </span>{
+  <span class="hljs-comment">// ...</span>
+}
+
+User.entity = <span class="hljs-string">&apos;users&apos;</span>
+
+<span class="hljs-comment">// Or...</span>
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">User</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Model</span> </span>{
+  <span class="hljs-keyword">static</span> get entity () {
+    <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;users&apos;</span>
+  }
+
+  <span class="hljs-comment">// ...</span>
+}</code></pre>
+<p>You can learn more about Models at <a href="../components/models.html">Models</a>.</p><h2 id="create-modules">Create Modules</h2><p>Modules are just simple <a href="https://vuex.vuejs.org/en/modules.html" target="_blank">Vuex Module</a> that correspond to the Models. Vuex ORM uses this module to interact with Vuex Store.</p><p>Vuex ORM is going to add any necessary states, getters, actions, and mutations, so you do not have to add anything to the modules, but if you want you can. When you do, just treat them as standard Vuex Module.</p><pre><code class="lang-js"><span class="hljs-comment">// The users module. If you do not need any specific features, you can</span>
+<span class="hljs-comment">// leave it an empty object.</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {}
+
+<span class="hljs-comment">// The posts module. You can add any additional things you want.</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+  state: {
+    fetched: <span class="hljs-literal">false</span>
+  },
+
+  actions: {
+    fetch ({ commit }) {
+      commit(<span class="hljs-string">&apos;fetch&apos;</span>)
+    }
+  },
+
+  mutations: {
+    fetch (state) {
+      state.fetched = <span class="hljs-literal">true</span>
+    }
+  }
+}</code></pre>
+<p>You may learn more about modules at <a href="../components/modules-and-store.html">Modules And Store</a>.</p><h3 id="register-models-and-modules-to-the-vuex-store">Register Models and Modules to the Vuex Store</h3><p>Now it is time for you to register Models and Modules to the Vuex. To do so, register Models and Modules you have created to the Database instance, and then register the Database to Vuex Store as Vuex plugin.</p><p>Use <code>install</code> when registering VuexORM as a plugin.</p><pre><code class="lang-js"><span class="hljs-keyword">import</span> Vue <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;vue&apos;</span>
+<span class="hljs-keyword">import</span> Vuex <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;vuex&apos;</span>
+<span class="hljs-keyword">import</span> VuexORM <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;@vuex-orm/core&apos;</span>
+<span class="hljs-keyword">import</span> User <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./User&apos;</span>
+<span class="hljs-keyword">import</span> Post <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./Post&apos;</span>
+<span class="hljs-keyword">import</span> users <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./users&apos;</span>
+<span class="hljs-keyword">import</span> posts <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./posts&apos;</span>
+
+Vue.use(Vuex)
+
+<span class="hljs-comment">// Create new instance of Database.</span>
+<span class="hljs-keyword">const</span> database = <span class="hljs-keyword">new</span> VuexORM.Database()
+
+<span class="hljs-comment">// Register Model and Module. The First argument is the Model, and</span>
+<span class="hljs-comment">// second is the Module.</span>
+database.register(User, users)
+database.register(Post, posts)
+
+<span class="hljs-comment">// Create Vuex Store and register database through Vuex ORM.</span>
+<span class="hljs-keyword">const</span> store = <span class="hljs-keyword">new</span> Vuex.Store({
+  plugins: [VuexORM.install(database)]
+})
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> store</code></pre>
+<p>Now you are ready to go. Vuex ORM is going to create <code>entities</code> module in Vuex Store State, and register any other modules under the <code>entities</code> namespace.</p><p>The state tree inside Vuex Store is going be as follows.</p><pre><code class="lang-js">store.state.entities
+
+<span class="hljs-comment">/*
+  {
+    entities: {
+      posts: {
+        data: {}
+      },
+      users: {
+        data: {}
+      }
+    }
+  }
+*/</span></code></pre>
+<p>Learn more about plugin registration at <a href="../components/database-and-registration.html">Database And Registration</a>.</p><h2 id="creating-data-to-vuex-store">Creating Data To Vuex Store</h2><p>You can use <code>create</code> action to create a new record in Vuex Store. Let&apos;s say we want to save a single post data to the store.</p><pre><code class="lang-js"><span class="hljs-comment">// Assuming this data structure is the response from the API backend.</span>
+<span class="hljs-keyword">const</span> posts = [
+  {
+    id: <span class="hljs-number">1</span>,
+    title: <span class="hljs-string">&apos;Hello, world!&apos;</span>,
+    body: <span class="hljs-string">&apos;Some awesome body...&apos;</span>,
+    author: {
+      id: <span class="hljs-number">1</span>,
+      name: <span class="hljs-string">&apos;John Doe&apos;</span>,
+      email: <span class="hljs-string">&apos;john@example.com&apos;</span>
+    }
+  }
+}
+
+store.dispatch(<span class="hljs-string">&apos;entities/posts/create&apos;</span>, { data: posts })</code></pre>
+<p>With above action, Vuex ORM creates the following schema at Vuex Store.</p><pre><code class="lang-js"><span class="hljs-comment">// Inside `store.state.entities`.</span>
+{
+  posts: {
+    data: {
+      <span class="hljs-string">&apos;1&apos;</span>: {
+        id: <span class="hljs-number">1</span>,
+        user_id: <span class="hljs-number">1</span>,
+        title: <span class="hljs-string">&apos;Hello, world!&apos;</span>,
+        body: <span class="hljs-string">&apos;Some awesome body...&apos;</span>,
+        author: <span class="hljs-number">1</span>
+      }
+    }
+  },
+
+  users: {
+    data: {
+      <span class="hljs-string">&apos;1&apos;</span>: {
+        id: <span class="hljs-number">1</span>,
+        name: <span class="hljs-string">&apos;John Doe&apos;</span>,
+        email: <span class="hljs-string">&apos;john@example.com&apos;</span>
+      }
+    }
+  }
+}</code></pre>
+<p>See how <code>posts</code> and <code>users</code> decoupled from each other. This is what it means for &quot;normalizing&quot; the data.</p><h2 id="retrieving-data-from-vuex-store">Retrieving Data From Vuex Store</h2><p>To retrieve data, you may just access the store state directly as usual.</p><pre><code class="lang-js">store.state.entities.posts.data[<span class="hljs-number">1</span>].title <span class="hljs-comment">// &lt;- &apos;Hello, world!&apos;</span>
+store.state.entities.users.data[<span class="hljs-number">1</span>].name <span class="hljs-comment">// &lt;- &apos;John Doe&apos;</span></code></pre>
+<p>However, Vuex ORM provides a way to query, and fetch data in an organized way through Vuex Getters.</p><pre><code class="lang-js"><span class="hljs-comment">// Fetch all post records. The result will be wrapped with Post model!</span>
+store.getters[<span class="hljs-string">&apos;entities/posts/all&apos;</span>]()
+
+<span class="hljs-comment">/*
+  [
+    Post { id: 1, user_id: 1, title: &apos;Hello, world!&apos;, body: &apos;Some awesome body...&apos;, author: 1 },
+    Post { id: 2, user_id: 2, title: &apos;Hello, another world!&apos;, body: &apos;Some another awesome body...&apos;, author: 2 },
+    ...
+  ]
+*/</span>
+
+<span class="hljs-comment">// Fetch single record with relation.</span>
+store.getters[<span class="hljs-string">&apos;entities/posts/query&apos;</span>]().with(<span class="hljs-string">&apos;author&apos;</span>).first()
+
+<span class="hljs-comment">/*
+  Post {
+    id: 1,
+    user_id: 1,
+    title: &apos;Hello, world!&apos;,
+    body: &apos;Some awesome body...&apos;,
+    author: User {
+      id: 1,
+      name: &apos;John Doe&apos;,
+      email: &apos;john@example.com&apos;
+    }
+  }
+*/</span></code></pre>
+<p>Learn more about retrieving data from the Store at <a href="../store/retrieving-data.html">Store: Retrieving Data</a></p>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="installation.html" class="navigation navigation-prev " aria-label="Previous page: Installation">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../core-components.html" class="navigation navigation-next " aria-label="Next page: Core Components">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Getting Started","level":"1.2.4","depth":2,"next":{"title":"Core Components","level":"1.3","depth":1,"path":"core-components.md","ref":"core-components.md","articles":[{"title":"Models","level":"1.3.1","depth":2,"path":"components/models.md","ref":"components/models.md","articles":[]},{"title":"Modules And Store","level":"1.3.2","depth":2,"path":"components/modules-and-store.md","ref":"components/modules-and-store.md","articles":[]},{"title":"Database And Registration","level":"1.3.3","depth":2,"path":"components/database-and-registration.md","ref":"components/database-and-registration.md","articles":[]}]},"previous":{"title":"Installation","level":"1.2.3","depth":2,"path":"prologue/installation.md","ref":"prologue/installation.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","edit-link"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/vuex-orm/vuex-orm"},"edit-link":{"label":"Edit This Page","base":"https://github.com/vuex-orm/vuex-orm/tree/master/docs"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Vuex ORM","links":{"sharing":{"facebook":false,"twitter":false}},"gitbook":">3.0.0"},"file":{"path":"prologue/getting-started.md","mtime":"2018-02-23T13:06:07.766Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2018-04-11T14:59:53.694Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

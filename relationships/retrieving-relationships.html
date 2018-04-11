@@ -1,0 +1,839 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>Retrieving Relationships · Vuex ORM</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.0">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../advanced-usage.html" />
+    
+    
+    <link rel="prev" href="inserting-relationships.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../prologue.html">
+            
+                <a href="../prologue.html">
+            
+                    
+                    Prologue
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" >
+            
+                <a target="_blank" href="https://github.com/vuex-orm/vuex-orm/releases">
+            
+                    
+                    Release Notes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../prologue/what-is-vuex-orm.html">
+            
+                <a href="../prologue/what-is-vuex-orm.html">
+            
+                    
+                    What Is Vuex ORM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../prologue/installation.html">
+            
+                <a href="../prologue/installation.html">
+            
+                    
+                    Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../prologue/getting-started.html">
+            
+                <a href="../prologue/getting-started.html">
+            
+                    
+                    Getting Started
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../core-components.html">
+            
+                <a href="../core-components.html">
+            
+                    
+                    Core Components
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../components/models.html">
+            
+                <a href="../components/models.html">
+            
+                    
+                    Models
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../components/modules-and-store.html">
+            
+                <a href="../components/modules-and-store.html">
+            
+                    
+                    Modules And Store
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../components/database-and-registration.html">
+            
+                <a href="../components/database-and-registration.html">
+            
+                    
+                    Database And Registration
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../interacting-with-store.html">
+            
+                <a href="../interacting-with-store.html">
+            
+                    
+                    Interacting With Store
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../store/inserting-and-updating-data.html">
+            
+                <a href="../store/inserting-and-updating-data.html">
+            
+                    
+                    Inserting And Updating Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../store/retrieving-data.html">
+            
+                <a href="../store/retrieving-data.html">
+            
+                    
+                    Retrieving Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../store/deleting-data.html">
+            
+                <a href="../store/deleting-data.html">
+            
+                    
+                    Deleting Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../relationships.html">
+            
+                <a href="../relationships.html">
+            
+                    
+                    Relationships
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="defining-relationships.html">
+            
+                <a href="defining-relationships.html">
+            
+                    
+                    Defining Relationships
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="inserting-relationships.html">
+            
+                <a href="inserting-relationships.html">
+            
+                    
+                    Inserting Relationships
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.3" data-path="retrieving-relationships.html">
+            
+                <a href="retrieving-relationships.html">
+            
+                    
+                    Retrieving Relationships
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../advanced-usage.html">
+            
+                <a href="../advanced-usage.html">
+            
+                    
+                    Advanced Usage
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../advanced/interact-with-store-from-model.html">
+            
+                <a href="../advanced/interact-with-store-from-model.html">
+            
+                    
+                    Interact With Store From Model
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../advanced/accessors-and-mutators.html">
+            
+                <a href="../advanced/accessors-and-mutators.html">
+            
+                    
+                    Accessors & Mutators
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../advanced/lifecycle-hooks.html">
+            
+                <a href="../advanced/lifecycle-hooks.html">
+            
+                    
+                    Lifecycle Hooks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../advanced/serialization.html">
+            
+                <a href="../advanced/serialization.html">
+            
+                    
+                    Serialization
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../digging-deeper.html">
+            
+                <a href="../digging-deeper.html">
+            
+                    
+                    Digging Deeper
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../digging-deeper/query-class.html">
+            
+                <a href="../digging-deeper/query-class.html">
+            
+                    
+                    Query Class
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../digging-deeper/plugins.html">
+            
+                <a href="../digging-deeper/plugins.html">
+            
+                    
+                    Plugins
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../api-reference.html">
+            
+                <a href="../api-reference.html">
+            
+                    
+                    API Reference
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../api/model.html">
+            
+                <a href="../api/model.html">
+            
+                    
+                    Model
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Retrieving Relationships</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="relationships-retrieving-relationships">Relationships: Retrieving Relationships</h1><p>You can use <code>with</code> method to load related model when querying data. The argument to the <code>with</code> method should be the name of the field that defines the relationship, not the entity name of the related model.</p><pre><code class="lang-js"><span class="hljs-keyword">const</span> user = store.getters[<span class="hljs-string">&apos;entities/users/query&apos;</span>]()
+  .with(<span class="hljs-string">&apos;profile&apos;</span>)
+  .with(<span class="hljs-string">&apos;posts&apos;</span>)
+  .find(<span class="hljs-number">1</span>)
+
+<span class="hljs-comment">/*
+  User {
+    id: 1,
+    name: &apos;john&apos;,
+
+    profile: Profile {
+      id: 1,
+      user_id: 1,
+      age: 24
+    },
+
+    posts: [
+      Post: { id: 1, user_id: 1, body: &apos;...&apos; },
+      Post: { id: 2, user_id: 1, body: &apos;...&apos; }
+    ]
+  }
+*/</span></code></pre>
+<h2 id="load-nested-relation">Load Nested Relation</h2><p>You can load nested relation with dot syntax.</p><pre><code class="lang-js"><span class="hljs-keyword">const</span> user = store.getters[<span class="hljs-string">&apos;entities/users/query&apos;</span>]()
+  .with(<span class="hljs-string">&apos;posts.comments&apos;</span>)
+  .find(<span class="hljs-number">1</span>)
+
+<span class="hljs-comment">/*
+  User {
+    id: 1,
+    name: &apos;john&apos;,
+
+    posts: [
+      Post: {
+        id: 1,
+        user_id: 1,
+        body: &apos;...&apos;,
+
+        comments: [
+          Comment: { id: 1, post_id: 1, body: &apos;...&apos; },
+          Comment: { id: 2, post_id: 1, body: &apos;...&apos; }
+        ]
+      },
+
+      Post: {
+        id: 2,
+        user_id: 1,
+        body: &apos;...&apos;,
+
+        comments: [
+          Comment: { id: 3, post_id: 2, body: &apos;...&apos; },
+          Comment: { id: 4, post_id: 2, body: &apos;...&apos; }
+        ]
+      },
+    ]
+  }
+*/</span></code></pre>
+<p>You can load multiple sub relations by separating them with <code>|</code>;</p><pre><code class="lang-js"><span class="hljs-keyword">const</span> user = store.getters[<span class="hljs-string">&apos;entities/users/query&apos;</span>]()
+  .with(<span class="hljs-string">&apos;posts.comments|reviews&apos;</span>)
+  .find(<span class="hljs-number">1</span>)</code></pre>
+<h2 id="load-all-relations">Load All Relations</h2><p>You can load all Relations with using the <code>withAll</code> method.</p><pre><code class="lang-js"><span class="hljs-keyword">const</span> user = store.getters[<span class="hljs-string">&apos;entities/users/query&apos;</span>]()
+  .withAll()
+  .find(<span class="hljs-number">1</span>)
+
+<span class="hljs-comment">/*
+  User {
+    id: 1,
+    name: &apos;john&apos;,
+
+    profile: Profile {
+      id: 1,
+      user_id: 1,
+      age: 24
+    },
+
+    posts: [
+      Post: {
+        id: 1,
+        user_id: 1,
+        body: &apos;...&apos;,
+
+        comments: null
+      },
+
+      Post: {
+        id: 2,
+        user_id: 1,
+        body: &apos;...&apos;,
+
+        comments: null
+      },
+    ]
+  }
+*/</span></code></pre>
+<p>To fetch all sub relations of a relation using the dot syntax, use <code>*</code>;</p><pre><code class="lang-js"><span class="hljs-keyword">const</span> user = store.getters[<span class="hljs-string">&apos;entities/users/query&apos;</span>]()
+  .with(<span class="hljs-string">&apos;posts.*&apos;</span>) <span class="hljs-comment">// Fetches all relations of all posts.</span>
+  .find(<span class="hljs-number">1</span>)</code></pre>
+<p>To fetch all sub relations to a certain level you can use the <code>withAllRecursive</code> method. You can specify a depth to which relations should be loaded. The depth defaults to 3, so if you call <code>withAllRecursive</code> with no arguments, it will fetch all sub relations of sub relations of sub relations of the queried entity.</p><pre><code class="lang-js"><span class="hljs-keyword">const</span> user = store.getters[<span class="hljs-string">&apos;entities/users/query&apos;</span>]()
+  .withAllRecursive()
+  .find(<span class="hljs-number">1</span>)
+
+<span class="hljs-comment">/*
+  User {
+    id: 1,
+    name: &apos;john&apos;,
+
+    profile: Profile {
+      id: 1,
+      user_id: 1,
+      age: 24
+    },
+
+    posts: [
+      Post: {
+        id: 1,
+        user_id: 1,
+        body: &apos;...&apos;,
+
+        comments: [
+          Comment: { id: 1, post_id: 1, body: &apos;...&apos; },
+          Comment: { id: 2, post_id: 1, body: &apos;...&apos; }
+        ]
+      },
+
+      Post: {
+        id: 2,
+        user_id: 1,
+        body: &apos;...&apos;,
+
+        comments: [
+          Comment: { id: 3, post_id: 2, body: &apos;...&apos; },
+          Comment: { id: 4, post_id: 2, body: &apos;...&apos; }
+        ]
+      },
+    ]
+  }
+*/</span></code></pre>
+<h2 id="relation-constraint">Relation Constraint</h2><p>To filter the result of relation loaded with <code>with</code> method, you can do so by passing a closure to the second argument.</p><pre><code class="lang-js"><span class="hljs-keyword">const</span> user = store.getters[<span class="hljs-string">&apos;entities/users/query&apos;</span>]().with(<span class="hljs-string">&apos;posts&apos;</span>, (query) =&gt; {
+  query.where(<span class="hljs-string">&apos;published&apos;</span>, <span class="hljs-literal">true</span>)
+}).find(<span class="hljs-number">1</span>)
+
+<span class="hljs-comment">/*
+  User {
+    id: 1,
+    name: &apos;john&apos;,
+
+    posts: [
+      Post: { id: 1, user_id: 1, body: &apos;...&apos;, published: true },
+      Post: { id: 2, user_id: 1, body: &apos;...&apos;, published: true }
+    ]
+  }
+*/</span></code></pre>
+<p>When you want to add a constraint to the nested relation, use a closure instead of the dot syntax.</p><pre><code class="lang-js"><span class="hljs-keyword">const</span> user = store.getters[<span class="hljs-string">&apos;entities/users/query&apos;</span>]().with(<span class="hljs-string">&apos;posts&apos;</span>, (query) =&gt; {
+  query.with(<span class="hljs-string">&apos;comments&apos;</span>, (query) =&gt; {
+    query.where(<span class="hljs-string">&apos;type&apos;</span>, <span class="hljs-string">&apos;review&apos;</span>)
+  }).where(<span class="hljs-string">&apos;published&apos;</span>, <span class="hljs-literal">true</span>)
+}).find(<span class="hljs-number">1</span>)
+
+<span class="hljs-comment">/*
+  User {
+    id: 1,
+    name: &apos;john&apos;,
+
+    posts: [
+      Post: {
+        id: 1,
+        user_id: 1,
+        body: &apos;...&apos;,
+        published: true,
+
+        comments: [
+          Comment: { id: 1, post_id: 1, body: &apos;...&apos;, type: &apos;review&apos; },
+          Comment: { id: 2, post_id: 1, body: &apos;...&apos;, type: &apos;review&apos; }
+        ]
+      },
+
+      Post: {
+        id: 2,
+        user_id: 1,
+        body: &apos;...&apos;,
+        published: true,
+
+        comments: [
+          Comment: { id: 3, post_id: 2, body: &apos;...&apos;, type: &apos;review&apos; },
+          Comment: { id: 4, post_id: 2, body: &apos;...&apos;, type: &apos;review&apos; }
+        ]
+      },
+    ]
+  }
+*/</span></code></pre>
+<h2 id="querying-relationship-existence">Querying Relationship Existence</h2><p>When querying the record, you may wish to limit your results based on the existence of a relationship. For example, imagine you want to retrieve all blog posts that have at least one comment. To do so, you may pass the name of the relationship to the has methods.</p><pre><code class="lang-js"><span class="hljs-comment">// Retrieve all posts that have at least one comment.</span>
+store.getters[<span class="hljs-string">&apos;entities/posts/query&apos;</span>]().has(<span class="hljs-string">&apos;comments&apos;</span>).get()</code></pre>
+<p>You may also specify count as well.</p><pre><code class="lang-js"><span class="hljs-comment">// Retrieve all posts that have at least 2 comments.</span>
+store.getters[<span class="hljs-string">&apos;entities/posts/query&apos;</span>]().has(<span class="hljs-string">&apos;comments&apos;</span>, <span class="hljs-number">2</span>).get()</code></pre>
+<p>Also, you may add an operator to customize your query even more. The supported operators are <code>=</code>, <code>&gt;</code>, <code>&gt;=</code>, <code>&lt;</code> and <code>&lt;=</code>.</p><pre><code class="lang-js"><span class="hljs-comment">// Retrieve all posts that have more than 2 comments.</span>
+store.getters[<span class="hljs-string">&apos;entities/posts/query&apos;</span>]().has(<span class="hljs-string">&apos;comments&apos;</span>, <span class="hljs-string">&apos;&gt;&apos;</span> <span class="hljs-number">2</span>).get()
+
+<span class="hljs-comment">// Retrieve all posts that have less than or exactly 3 comments.</span>
+store.getters[<span class="hljs-string">&apos;entities/posts/query&apos;</span>]().has(<span class="hljs-string">&apos;comments&apos;</span>, <span class="hljs-string">&apos;&lt;=&apos;</span> <span class="hljs-number">2</span>).get()</code></pre>
+<p>If you need even more power, you may use the <code>whereHas</code> method to put &quot;where&quot; conditions on your <code>has</code> queries. This method allow you to add customized constraints to a relationship constraint, such as checking the content of a comment.</p><pre><code class="lang-js"><span class="hljs-comment">// Retrieve all posts that have comment from user_id 1.</span>
+store.getters[<span class="hljs-string">&apos;entities/posts/query&apos;</span>]().whereHas(<span class="hljs-string">&apos;comments&apos;</span>, (query) =&gt; {
+  query.where(<span class="hljs-string">&apos;user_id&apos;</span>, <span class="hljs-number">1</span>)
+}).get()</code></pre>
+<h2 id="querying-relationship-absence">Querying Relationship Absence</h2><p>To retrieve records depending on absence of the relationship, use <code>hasNot</code> and <code>whereHasNot</code> method. These method will work same as <code>has</code> and <code>whereHas</code> but in opposite result.</p><pre><code class="lang-js"><span class="hljs-comment">// Retrieve all posts that doesn&apos;t have comments.</span>
+store.getters[<span class="hljs-string">&apos;entities/posts/query&apos;</span>]().hasNot(<span class="hljs-string">&apos;comments&apos;</span>).get()
+
+<span class="hljs-comment">// Retrieve all posts that doesn&apos;t have comment with user_id of 1.</span>
+store.getters[<span class="hljs-string">&apos;entities/posts/query&apos;</span>]().whereHasNot(<span class="hljs-string">&apos;comments&apos;</span>, (query) =&gt; {
+  query.where(<span class="hljs-string">&apos;user_id&apos;</span>, <span class="hljs-number">1</span>)
+}).get()</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="inserting-relationships.html" class="navigation navigation-prev " aria-label="Previous page: Inserting Relationships">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../advanced-usage.html" class="navigation navigation-next " aria-label="Next page: Advanced Usage">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Retrieving Relationships","level":"1.5.3","depth":2,"next":{"title":"Advanced Usage","level":"1.6","depth":1,"path":"advanced-usage.md","ref":"advanced-usage.md","articles":[{"title":"Interact With Store From Model","level":"1.6.1","depth":2,"path":"advanced/interact-with-store-from-model.md","ref":"advanced/interact-with-store-from-model.md","articles":[]},{"title":"Accessors & Mutators","level":"1.6.2","depth":2,"path":"advanced/accessors-and-mutators.md","ref":"advanced/accessors-and-mutators.md","articles":[]},{"title":"Lifecycle Hooks","level":"1.6.3","depth":2,"path":"advanced/lifecycle-hooks.md","ref":"advanced/lifecycle-hooks.md","articles":[]},{"title":"Serialization","level":"1.6.4","depth":2,"path":"advanced/serialization.md","ref":"advanced/serialization.md","articles":[]}]},"previous":{"title":"Inserting Relationships","level":"1.5.2","depth":2,"path":"relationships/inserting-relationships.md","ref":"relationships/inserting-relationships.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","edit-link"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/vuex-orm/vuex-orm"},"edit-link":{"label":"Edit This Page","base":"https://github.com/vuex-orm/vuex-orm/tree/master/docs"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Vuex ORM","links":{"sharing":{"facebook":false,"twitter":false}},"gitbook":">3.0.0"},"file":{"path":"relationships/retrieving-relationships.md","mtime":"2018-03-13T16:44:30.284Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2018-04-11T14:59:53.694Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
