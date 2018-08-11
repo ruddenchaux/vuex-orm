@@ -6233,13 +6233,9 @@
         Model.httpRequest = function (conf, pathParams) {
             return __awaiter(this, void 0, void 0, function () {
                 return __generator(this, function (_a) {
-                    switch (_a.label) {
-                        case 0:
-                            conf.http.url = this.getUrl(conf, pathParams);
-                            return [4 /*yield*/, this._http.request(conf.http)
-                                    .catch(function (err) { console.log(err); })];
-                        case 1: return [2 /*return*/, (_a.sent()) || []];
-                    }
+                    conf.http.url = this.getUrl(conf, pathParams);
+                    return [2 /*return*/, this._http.request(conf.http)
+                            .catch(function (err) { console.log(err); }) || []];
                 });
             });
         };
@@ -6258,13 +6254,15 @@
                     switch (_a.label) {
                         case 0:
                             _conf = this.checkMethodConf('fetch', conf);
-                            data = this.httpRequest(_conf);
-                            if (!_conf.localSync) return [3 /*break*/, 2];
-                            return [4 /*yield*/, this.dispatch('insertOrUpdate', { data: data })];
+                            return [4 /*yield*/, this.httpRequest(_conf)];
                         case 1:
+                            data = _a.sent();
+                            if (!_conf.localSync) return [3 /*break*/, 3];
+                            return [4 /*yield*/, this.dispatch('insertOrUpdate', { data: data })];
+                        case 2:
                             _a.sent();
-                            _a.label = 2;
-                        case 2: return [2 /*return*/, data];
+                            _a.label = 3;
+                        case 3: return [2 /*return*/, data];
                     }
                 });
             });
@@ -6342,15 +6340,17 @@
                     switch (_a.label) {
                         case 0:
                             _conf = this.checkMethodConf('fetchById', conf);
-                            data = this.httpRequest(_conf, { 'id': id.toString() });
-                            if (!_conf.localSync) return [3 /*break*/, 2];
+                            return [4 /*yield*/, this.httpRequest(_conf, { 'id': id.toString() })];
+                        case 1:
+                            data = _a.sent();
+                            if (!_conf.localSync) return [3 /*break*/, 3];
                             // await this.update(data)
                             return [4 /*yield*/, this.dispatch('insertOrUpdate', { data: data })];
-                        case 1:
+                        case 2:
                             // await this.update(data)
                             _a.sent();
-                            _a.label = 2;
-                        case 2: return [2 /*return*/, data];
+                            _a.label = 3;
+                        case 3: return [2 /*return*/, data];
                     }
                 });
             });
@@ -6424,18 +6424,22 @@
             return __awaiter(this, void 0, void 0, function () {
                 var _conf, dataOutput;
                 return __generator(this, function (_a) {
-                    _conf = this.checkMethodConf('create', conf);
-                    if (_conf.remote) {
-                        dataOutput = this.httpRequest(_conf);
-                        if (_conf.localSync) {
-                            this.dispatch('insert', { data: dataOutput });
-                        }
+                    switch (_a.label) {
+                        case 0:
+                            _conf = this.checkMethodConf('create', conf);
+                            if (!_conf.remote) return [3 /*break*/, 2];
+                            return [4 /*yield*/, this.httpRequest(_conf)];
+                        case 1:
+                            dataOutput = _a.sent();
+                            if (_conf.localSync) {
+                                this.dispatch('insert', { data: dataOutput });
+                            }
+                            return [3 /*break*/, 3];
+                        case 2:
+                            dataOutput = this.dispatch('create', data);
+                            _a.label = 3;
+                        case 3: return [2 /*return*/, dataOutput];
                     }
-                    /* tslint:disable */
-                    else {
-                        dataOutput = this.dispatch('create', data);
-                    }
-                    return [2 /*return*/, dataOutput];
                 });
             });
         };
@@ -6452,24 +6456,28 @@
             return __awaiter(this, void 0, void 0, function () {
                 var _conf, dataOutput;
                 return __generator(this, function (_a) {
-                    _conf = this.checkMethodConf('update', conf);
-                    if (_conf.remote) {
-                        dataOutput = this.httpRequest(_conf, { 'id': id.toString() });
-                        if (_conf.localSync && dataOutput) {
-                            this.dispatch('update', {
+                    switch (_a.label) {
+                        case 0:
+                            _conf = this.checkMethodConf('update', conf);
+                            if (!_conf.remote) return [3 /*break*/, 2];
+                            return [4 /*yield*/, this.httpRequest(_conf, { 'id': id.toString() })];
+                        case 1:
+                            dataOutput = _a.sent();
+                            if (_conf.localSync && dataOutput) {
+                                this.dispatch('update', {
+                                    where: id,
+                                    data: dataOutput
+                                });
+                            }
+                            return [3 /*break*/, 3];
+                        case 2:
+                            dataOutput = this.dispatch('update', {
                                 where: id,
-                                data: dataOutput
+                                data: data
                             });
-                        }
+                            _a.label = 3;
+                        case 3: return [2 /*return*/, dataOutput];
                     }
-                    /* tslint:disable */
-                    else {
-                        dataOutput = this.dispatch('update', {
-                            where: id,
-                            data: data
-                        });
-                    }
-                    return [2 /*return*/, dataOutput];
                 });
             });
         };
@@ -6484,18 +6492,22 @@
             return __awaiter(this, void 0, void 0, function () {
                 var _conf, dataOutput;
                 return __generator(this, function (_a) {
-                    _conf = this.checkMethodConf('deleteById', conf);
-                    if (_conf.remote) {
-                        dataOutput = this.httpRequest(_conf, { 'id': id.toString() });
-                        if (_conf.localSync && dataOutput) {
+                    switch (_a.label) {
+                        case 0:
+                            _conf = this.checkMethodConf('deleteById', conf);
+                            if (!_conf.remote) return [3 /*break*/, 2];
+                            return [4 /*yield*/, this.httpRequest(_conf, { 'id': id.toString() })];
+                        case 1:
+                            dataOutput = _a.sent();
+                            if (_conf.localSync && dataOutput) {
+                                this.dispatch('delete', id);
+                            }
+                            return [3 /*break*/, 3];
+                        case 2:
                             this.dispatch('delete', id);
-                        }
+                            _a.label = 3;
+                        case 3: return [2 /*return*/];
                     }
-                    /* tslint:disable */
-                    else {
-                        this.dispatch('delete', id);
-                    }
-                    return [2 /*return*/];
                 });
             });
         };
@@ -6509,18 +6521,22 @@
             return __awaiter(this, void 0, void 0, function () {
                 var _conf, dataOutput;
                 return __generator(this, function (_a) {
-                    _conf = this.checkMethodConf('deleteById', conf);
-                    if (_conf.remote) {
-                        dataOutput = this.httpRequest(_conf);
-                        if (_conf.localSync && dataOutput) {
+                    switch (_a.label) {
+                        case 0:
+                            _conf = this.checkMethodConf('deleteById', conf);
+                            if (!_conf.remote) return [3 /*break*/, 2];
+                            return [4 /*yield*/, this.httpRequest(_conf)];
+                        case 1:
+                            dataOutput = _a.sent();
+                            if (_conf.localSync && dataOutput) {
+                                this.dispatch('deleteAll', {});
+                            }
+                            return [3 /*break*/, 3];
+                        case 2:
                             this.dispatch('deleteAll', {});
-                        }
+                            _a.label = 3;
+                        case 3: return [2 /*return*/];
                     }
-                    /* tslint:disable */
-                    else {
-                        this.dispatch('deleteAll', {});
-                    }
-                    return [2 /*return*/];
                 });
             });
         };
