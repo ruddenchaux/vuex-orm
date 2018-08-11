@@ -6422,6 +6422,7 @@ var Model = /** @class */ (function (_super) {
                     case 0:
                         _conf = this.checkMethodConf('create', conf);
                         if (!_conf.remote) return [3 /*break*/, 2];
+                        _conf.http.data = data;
                         return [4 /*yield*/, this.httpRequest(_conf)];
                     case 1:
                         dataOutput = _a.sent();
@@ -6454,6 +6455,7 @@ var Model = /** @class */ (function (_super) {
                     case 0:
                         _conf = this.checkMethodConf('update', conf);
                         if (!_conf.remote) return [3 /*break*/, 2];
+                        _conf.http.data = data;
                         return [4 /*yield*/, this.httpRequest(_conf, { 'id': id.toString() })];
                     case 1:
                         dataOutput = _a.sent();
